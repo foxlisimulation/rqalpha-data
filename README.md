@@ -79,6 +79,13 @@ $ pip install rqalpha
 ```bash
 $ pip install rqalpha-data
 ```
+#### 安装的时候会报错，更改setup.py为如下：
+'''code
+try: # for pip >= 10
+    from pip._internal.req import parse_requirements
+except ImportError: # for pip <= 9.0.3
+    from pip.req import parse_requirements
+'''
 
 ## Quick Start
 
