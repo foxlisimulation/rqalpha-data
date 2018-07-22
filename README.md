@@ -69,7 +69,29 @@ get_bars(order_book_id,
 ```
 
 ## Install
-
+### 安装rqalpha的步骤
+- 创建一个虚拟环境 
+```
+conda create --name rq python=3.5 
+activate rq
+```
+- 升级PIP
+- 升级setuptools cpython
+```
+pip install -U  setuptools cython -i https://pypi.douban.com/simple
+```
+- 安装ta-lib https://download.lfd.uci.edu/pythonlibs/l8ulg3xw/TA_Lib-0.4.17-cp35-cp35m-win_amd64.whl
+- 安装bcolz 
+```conda install -c conda-forge bcolz==1.2.0```
+- 安装RQALPHA
+```pip install rqalpha```
+- 注册notebook
+```
+conda install notebook ipykernel
+python -m ipykernel install --user --name rq --display-name "RQ"
+pip uninstall tornado
+pip install tornado==4.5.3
+```
 #### Install rqalpha
 ```bash
 $ pip install rqalpha
